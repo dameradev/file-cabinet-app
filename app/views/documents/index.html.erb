@@ -1,0 +1,5 @@
+<% @documents.each do |doc| %>
+  <h2><%= link_to doc.title, doc %></h2>
+  <p><%= time_ago_in_words(doc.created_at) %></p>
+  <p><%= truncate(doc.content, length:60) %></p>
+<% end %>
