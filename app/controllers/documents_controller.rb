@@ -28,9 +28,22 @@ class DocumentsController < ApplicationController
   end
 
   def update
+
+
+    respond_to do |format|
+      if @document.update(document_params)
+        format.html { redirect_to @document, notice: 'Document was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
   end
 
   def destroy
+    @document.destroy
+    respond_to do |format|
+      format.html { redirect_to documents_path, notice: 'Portfolio item was deleted' }
+    end
   end
 
   private

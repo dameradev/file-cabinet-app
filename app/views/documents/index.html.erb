@@ -1,3 +1,5 @@
+<%= link_to "Create a new document", new_document_path %>
+
 <% @documents.each do |doc| %>
   <h2><%= link_to doc.title, doc %></h2>
   <p><%= time_ago_in_words(doc.created_at) %></p>
