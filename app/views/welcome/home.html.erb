@@ -1,2 +1,25 @@
-<h1>This is a placeholder</h1>
-<p>Find me in app/views/welcome/home.html.erb</p>
+<div id="banner">
+  <div class="banner_content">
+    <h1>File Cabinet</h1>
+    <h3>Your life's work. Organized, always.</h3>
+    <button type="button" name="enter"> <%= link_to 'Enter', new_user_registration_path %> </button>
+  </div>
+</div>
+<div id="callouts">
+  <div class="callout_inner">
+    <div class="wrapper">
+      <div class="callout">
+        <h2>Organize</h2>
+        <p>Sartorial fingerstache glossier tofu chicharrones bespoke austin subway tile iceland poutine street art. Beard snackwave truffaut meditation direct trade fingerstache, try-hard kinfolk williamsburg ugh master cleanse VHS small batch freegan poke. Narwhal retro asymmetrical chartreuse vegan. Blog green juice put a bird on it asymmetrical la croix +1 tofu brunch mumblecore YOLO occupy PBR&B listicle. Green juice taiyaki art party.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="bottom_cta">
+  <div class="wrapper">
+    <h2>Go Ahead!</h2>
+    <br>
+    <button type="button" name="join"><%= link_to "Join Now", new_user_registration_path %></button>
+  </div>
+</div>
