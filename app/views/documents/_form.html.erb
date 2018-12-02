@@ -1,4 +1,10 @@
+
 <%= simple_form_for @document do |f| %>
+<% if @document.errors.any? %>
+<% @document.errors.full_messages.each do |error| %>
+  <%= alert_generator error %>
+<% end %>
+<% end %>
   <%= f.input :title %>
   <%= f.input :content %>
   <%= f.button :submit, class: 'button' %>
